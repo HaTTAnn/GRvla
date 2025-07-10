@@ -405,7 +405,7 @@ class So100DataConfig(BaseDataConfig):
 
 
 class SingleKinovaDataConfig(BaseDataConfig):
-    video_keys = ["video.cam_exterior","video.cam_wrist"]
+    video_keys = ["video.front", "video.wrist"]
     state_keys = ["state.single_arm", "state.gripper"]
     action_keys = ["action.single_arm", "action.gripper"]
     language_keys = ["annotation.human.task_description"]
