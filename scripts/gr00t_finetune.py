@@ -14,6 +14,7 @@
 # limitations under the License.
 
 import os
+os.environ["CUDA_VISIBLE_DEVICES"] = "7"
 import subprocess
 import sys
 from dataclasses import dataclass
@@ -230,7 +231,8 @@ if __name__ == "__main__":
 
     if config.num_gpus == 1:
         # Single GPU mode - set CUDA_VISIBLE_DEVICES=0
-        os.environ["CUDA_VISIBLE_DEVICES"] = "0"
+        # os.environ["CUDA_VISIBLE_DEVICES"] = "3"
+        os.environ["CUDA_VISIBLE_DEVICES"] = "7"
         # Run the script normally
         main(config)
     else:
@@ -242,7 +244,7 @@ if __name__ == "__main__":
             # Remove any existing CUDA_VISIBLE_DEVICES from environment
             # if "CUDA_VISIBLE_DEVICES" in os.environ:
             #     del os.environ["CUDA_VISIBLE_DEVICES"]
-            os.environ["CUDA_VISIBLE_DEVICES"] = "0,1,2"  # Set to the GPUs you want to use
+            # os.environ["CUDA_VISIBLE_DEVICES"] = "2,3,4"  # Set to the GPUs you want to use
             # Use subprocess.run instead of os.system
             cmd = [
                 "torchrun",

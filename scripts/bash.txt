@@ -13,8 +13,8 @@ Finetune bash code:
 '''
 python scripts/gr00t_finetune.py \
    --dataset-path /data/dataset/gr00t/real_aloha/picking_banana \
-   --num-gpus 3 \
-   --output-dir  /data/ckpt/gr00t/aloha-8000-1 \
+   --num-gpus 1 \
+   --output-dir  /data/ckpt/gr00t/test \
    --max-steps 20000 \
    --data-config aloha \
    --video-backend torchvision_av \
@@ -24,8 +24,8 @@ python scripts/gr00t_finetune.py \
 '''
 python scripts/gr00t_finetune.py \
    --dataset-path /home/GRvla/demo_data/so100_strawberry_grape/ \
-   --num-gpus 3 \
-   --output-dir ./so100-checkpoints-4000  \
+   --num-gpus 1 \
+   --output-dir /data/ckpt/gr00t/test  \
    --max-steps 4000 \
    --data-config so100 \
    --video-backend torchvision_av

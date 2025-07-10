@@ -245,7 +245,7 @@ if __name__ == "__main__":
         "--use_policy", action="store_true"
     )  # default is to playback the provided dataset
     parser.add_argument("--dataset_path", type=str, default=default_dataset_path)
-    parser.add_argument("--host", type=str, default="10.110.17.183")
+    parser.add_argument("--host", type=str, default="192.168.3.101")
     parser.add_argument("--port", type=int, default=5555)
     parser.add_argument("--action_horizon", type=int, default=12)
     parser.add_argument("--actions_to_execute", type=int, default=350)

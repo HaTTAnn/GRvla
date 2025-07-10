@@ -142,13 +142,13 @@ if __name__ == "__main__":
     parser.add_argument(
         "--data_path",
         type=str,
-        default="demo_data/robot_sim.PickNPlace",
+        default="/data/dataset/datasets--wge118--Fnii-VLA-Kinova-1.0/snapshots/53a6e858c8fcdc097c5fcf0ddadc671adf912876",
         help="Path to the dataset",
     )
     parser.add_argument(
         "--embodiment_tag",
         type=str,
-        default="gr1",
+        default="Single_Kinova",
         help="Full list of embodiment tags can be found in gr00t.data.schema.EmbodimentTag",
     )
     parser.add_argument(

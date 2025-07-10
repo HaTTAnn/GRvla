@@ -12,9 +12,15 @@ Run the following command to start the policy server.
 
 ```bash
 python scripts/inference_service.py --server \
-    --model_path <PATH_TO_YOUR_CHECKPOINT> \
+    --model_path /data/ckpt/gr00t/kinova-checkpoints-newtag \
     --embodiment_tag new_embodiment \
-    --data_config so100 \
+    --data_config aloha\
+    --denoising_steps 4
+
+python scripts/inference_service.py --server \
+    --model_path /data/ckpt/gr00t/kinova-checkpoints-newtag \
+    --embodiment_tag so100 \
+    --data_config Single_Kinova \
     --denoising_steps 4
 ```
 
